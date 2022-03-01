@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 9, 2022, 3:37:22 PM
+    Author     : webadill
+*/
+
+/* en css se llaman reglas al conjunto de atributos a utilizar
+Unidades de medida: vh (1/100)
+Display: como se muestra el comportamiento de un bloque de nivel*/
+
+.container{
+Height: 100 vh;
+Width: 100%;
+background-image: url(../images/background.png);
+Background-position: center;
+Background-size: cover;
+Padding-left: 5%;
+Padding-right: 5%;
+Box-sizing:border-box;
+Position:relative;}
+
+.navbar{
+Height: 15 vh;
+Width: 100%;
+Margin: auto;
+Display: flex;
+Align-items: center;
+}
+
+Nav{
+Flex: 1;
+Padding-left:60px;
+}
+
+Nav ul li {
+Display:inline-block;
+List-style:none;
+Margin:0px 20px;
+}
+
+Nav ul li a{
+Text-decoration: none;
+Color:#B755FA;
+}
+
+.content{
+Margin-top:10%;
+Margin-left:10%;
+}
+.content p{
+Font-size: 20px;
+Color: #7521AE;
+}
+.content h1{
+Font-size:60px;
+Font-weight:100;
+Margin-top:24px;
+Margin-bottom:15px;
+Color:5B1A88;
+}
+
+.arrow-icons{
+Margin-top: 40px;
+Display:flex;
+}
+
+.arrow-icons img{
+Width:40px;
+Margin-right:25px;
+}
+
+.bad{
+Height: 50%;
+Position:absolute;
+Bottom:50px;
+Right:160px;
+}
