@@ -24,24 +24,7 @@ public class Persona implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     
     private long id;
-    
-    public String getNombre(){
-    return nombre;
-    }
-    
-    public void setNombre(String nombre){
-    this.nombre = nombre;
-    }
-    
-    private String nombre;
     private String apellido1;
-    private String apellido2;
-    private String email;
-    private String telefono;
-    
-    @ManyToOne
-    @JoinColumn(name="paises_id")
-    private Pais pais;
 
     public long getId() {
         return id;
@@ -67,20 +50,20 @@ public class Persona implements Serializable {
         this.apellido2 = apellido2;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getTelefono() {
         return telefono;
     }
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Pais getPais() {
@@ -90,5 +73,11 @@ public class Persona implements Serializable {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-
+    private String apellido2;
+    private String telefono;
+    private String email;
+    
+    @ManyToOne
+    @JoinColumn(name="paises_id")
+    private Pais pais;
 }
