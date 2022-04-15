@@ -10,6 +10,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
-    </body>
+        <header th:fragment="header" class="header">
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a th:href="@{/cliente/listado}" class="nav-menu-link nav-link"
+                       th:text="#{plantilla.clientes}">Clientis</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a th:href="@{/categoria/listado}" class="nav-menu-link nav-link"
+                       th:text="#{plantilla.categorias}">Categora</a>
+                </li> 
+                <li class="nav-menu-item">
+                    <a th:href="@{/articulo/listado}" class="nav-menu-link nav-link"
+                       th:text="#{plantilla.articulos}">Articulos</a>
+                </li> 
+
+            </ul>
+        </nav>  
+    </header>
+    <footer th:fragment="footer" class="footer">
+        <p>&COPY [[#{plantilla.derechos}]]
+            <a th:thref="@{/{lag=es}}">ES</a>
+            <a th:thref="@{/{lag=en}}">EN</a></p>
+    </footer>
+</body>
+
 </html>
