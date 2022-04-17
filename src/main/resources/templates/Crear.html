@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="plantilla/templates: :header"></head>
+    <body>
+        <header th:replace="plantilla/templates: :header"></header>
+        <div class="container">
+            <div class="card-header bg-black text-white">
+            </div>
+            <div class="card-body">
+
+                <!-- Esto es un formulario -->     
+                <div class="container">
+                    <form th:object ="${persona}"
+                          th:action="@{/save}"
+                          method="POST"
+                          >
+                        <input type="hidden" th:field="*{id}">
+
+                        <div class="form-group mb-3 row">
+                            <label class="col-md-2 col-form-label" for="nombre">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="from-control form-control-sm col-md-6" th:field="*{Nombre}" placeholde="Nombre">
+
+                            </div>
+                        </div> 
+                        <div class="form-group mb-3 row">
+                            <label class=" form-control-sm col-md-2 col-form-label" for="apellido1">Apellido1</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="from-control form-control-sm col-md-6" th:field="*{Apellido1}" placeholder="Apellido1" placeholder="Apellido1">
+                            </div>
+                        </div> 
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-md-2 col-form-label" for="apellido2">Apellido2</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="from-control form-control-sm col-md-6" th:field="*{Apellido2}" placeholder="Apellido2">
+                            </div>
+                        </div> 
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-md-2 col-form-label" for="telefono">Telefono</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="from-control form-control-sm col-md-6" th:field="*{Telefono}" placeholder="Telefono">
+                            </div>
+                        </div> 
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-md-2 col-form-label" for="email">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="from-control form-control-sm col-md-6" th:field="*{Email}" placeholder="Email">
+                            </div>
+                        </div> 
+                        <div class="form-group mb-3 row">
+                            <label class="form-control-sm col-md-2 col-form-label " for="paises">Pais</label>
+                            <div class="col-sm-10">
+                                <select th:field="*{Pais}">
+                                    <option th:each="x:${paises}"
+                                            th:value="${x.id}"
+                                            th:text="{x.pais}"/>
+                                </select>
+
+                            </div>
+                        </div
+                        
+                        <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      
+        <footer th:replace="plantilla/>templates::footer"></footer> 
+                    </body>
+                        </html>
